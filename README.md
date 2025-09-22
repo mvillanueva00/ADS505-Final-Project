@@ -1,43 +1,61 @@
 # Smart Inventory & Demand Forecasting for Multi-Store Retail
 
-## Overview  
-This project was developed as part of the ADS-505 course final team project. The goal is to forecast daily product demand at the store–SKU level and translate forecasts into practical inventory decisions such as reorder points and safety stock. By doing so, the project addresses stockouts, overstocks, and helps quantify effects of price, promotions, holidays, and weather on demand.
+This project is a part of the ADS-505 course in the Applied Data Science Program at the University of San Diego.  
 
-## Objectives  
-- Reduce stockouts and overstocks  
-- Quantify drivers of demand (price, promotions, holidays, weather)  
-- Deliver an executive-facing Tableau dashboard with KPIs and drill-downs
+-- Project Status: Active  
 
-## Dataset  
-We use a synthetic retail dataset (~73,000 rows; 2022–2023 daily granularity) containing:  
-- Date, Store ID, Product ID, Category, Region  
-- Inventory Level, Units Sold, Units Ordered, Demand Forecast, Price  
-- Holiday, promotion, and weather indicators (if available)  
+---
 
-This dataset supports time-series forecasting and driver analysis across stores and categories.
+## Installation  
+Clone the repository and install required Python packages from `requirements.txt`.  
+Run Jupyter notebooks in the `notebooks/` folder to reproduce data cleaning, feature engineering, and modeling.  
+The Tableau dashboard file is included in the `dashboard/` folder for visualization.  
 
-## Methods  
-- **Data Preparation:** Cleaning, feature engineering (calendar, promo, price), handling missing values  
-- **Forecasting Models:** Seasonal Naïve, Prophet, tree-based models (LightGBM), exploratory LSTM  
-- **Evaluation Metrics:** MAPE and MAE, with prediction intervals  
-- **Business Translation:** Forecasts converted into reorder points and safety stock calculations  
-- **Visualization:** Tableau dashboard for executives, including KPIs, filters, and drill-downs
+---
 
-## Repository Structure  
-- `data/` – Raw and processed datasets (synthetic)  
-- `notebooks/` – Jupyter notebooks for EDA, modeling, and evaluation  
-- `scripts/` – Python scripts for cleaning, forecasting, and utilities  
-- `dashboard/` – Tableau files and exports  
-- `docs/` – Project documentation, including the business brief and final report  
-- `README.md` – Project overview (this file)
+## Project Intro/Objective  
+The main purpose of this project is to forecast daily product demand at the store–SKU level and translate forecasts into practical inventory decisions such as reorder points and safety stock. The goals are to reduce costly stockouts and overstocks, quantify drivers of demand like price and promotions, and deliver insights through an executive-facing Tableau dashboard. This will enable merchandisers and planners to make faster and more informed decisions.  
 
-## Results  
-Models improve forecast accuracy over baselines and translate those gains into practical stocking guidance. The Tableau dashboard highlights stockout risks, overstock pockets, and allows merchandisers to drill into store or product levels for decision making.
+---
 
-## Team  
+## Partner(s)/Contributor(s)  
 - Jami McMillen  
 - Shivam Patel  
 - Mark Henry Villanueva  
 
+---
+
+## Methods Used  
+- Predictive Modeling  
+- Machine Learning  
+- Time-Series Forecasting  
+- Data Visualization  
+- Data Manipulation  
+- Feature Engineering  
+
+---
+
+## Technologies  
+- Python  
+- Google Colab  
+- Tableau  
+- GitHub  
+
+---
+
+## Project Description  
+We use a synthetic retail dataset (~73,000 rows; 2022–2023 daily granularity) with fields such as Date, Store ID, Product ID, Category, Region, Inventory Level, Units Sold, Units Ordered, Demand Forecast, and Price. Holiday, promotion, and weather indicators are included where available.  
+
+Our approach begins with data cleaning and feature engineering (calendar features, price and promotion flags, lags, and rolling statistics). Baseline models such as seasonal naïve and Prophet are used for initial forecasting. We then evaluate advanced methods including LightGBM and exploratory LSTM models. Models are assessed with MAPE and MAE metrics, and outputs are translated into inventory rules such as reorder points and safety stock.  
+
+The final deliverable includes a Tableau dashboard with KPIs, trend visualizations, store and region heatmaps, and interactive drill-downs to identify stockout risks and overstock pockets.  
+
+---
+
 ## License  
-This project uses synthetic data and is intended for academic purposes only.
+This project uses synthetic data and is intended for academic purposes only.  
+
+---
+
+## Acknowledgments  
+We would like to thank the University of San Diego Applied Data Science program faculty for their guidance throughout the course.  
